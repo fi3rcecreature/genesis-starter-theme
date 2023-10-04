@@ -41,6 +41,18 @@
 				color: $color--primary;
 			}
 		}
+
+		.page & {
+			margin: 0 0 $gutter;
+			&:after {
+				content: url("/wp-content/themes/urban-strategies-pro/assets/svg/yellowhr2.svg");
+				width: 120px;
+				display: block;
+				margin: 0 auto;
+				line-height: 1;
+				margin-top: 1rem;
+			}
+		}
 	}
 
 	// Entry title link.

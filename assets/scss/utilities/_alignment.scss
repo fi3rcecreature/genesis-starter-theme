@@ -48,8 +48,11 @@
 	}
 
 	&wide {
-		max-width: 120%;
 		transform: translate(-50%);
+		max-width: 100%;
+		@include mq(m) {
+			max-width: 120%;
+		}
 	}
 
 	&full {

@@ -197,30 +197,3 @@ mix.webpackConfig({
         })
     ]
 });
-
-if (process.env.sync) {
-
-    /*
-     * Monitor files for changes and inject your changes into the browser.
-     *
-     * @link https://laravel.com/docs/5.6/mix#browsersync-reloading
-     */
-    mix.browserSync({
-        notify: false,
-        proxy: 'https://genesis-starter.test',
-        host: 'genesis-starter.test',
-        open: 'external',
-        port: '8000',
-        https: {
-            'key': '/Users/seothemes/.config/valet/Certificates/genesis-starter.test.key',
-            'cert': '/Users/seothemes/.config/valet/Certificates/genesis-starter.test.crt'
-        },
-        files: [
-            'assets/css/*',
-            'config/*.php',
-            'lib/**/*.php',
-            'templates/*.php',
-            'functions.php'
-        ]
-    });
-}

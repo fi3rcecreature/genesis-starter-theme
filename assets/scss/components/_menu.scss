@@ -62,5 +62,9 @@
 	a:focus,
 	.current-menu-item > a {
 		color: $color--primary;
+
+		.site-footer & {
+			color: $color--blue;
+		}
 	}
 }

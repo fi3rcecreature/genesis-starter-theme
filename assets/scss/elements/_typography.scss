@@ -24,6 +24,7 @@ body {
 a {
 	color: $color--primary;
 	text-decoration: none;
+	font-weight: $font-weight--semibold;
 
 	@include transition();
 
@@ -31,7 +32,29 @@ a {
 		color: $color--primary;
 		text-decoration: underline;
 	}
+
+	.entry-content & {
+		border-bottom: 3px solid $color--yellow;
+
+		@include hover-focus {
+			border-bottom: 3px solid $color--yellow;
+		}
+	}
 }
+
+// For a special font that's not included in the CMS
+// .scriptina {
+// 	font-family: $font-family--special;
+// 	font-weight: $font-weight--regular;
+// 	line-height: .5;
+// 	margin-bottom: 0;
+// 	margin-top: 5rem;
+
+// 	@include mq(m) {
+// 		margin-top: 7rem;
+// 	}	
+// }
+
 
 p {
 	margin: 0 0 $spacing--m;
@@ -60,16 +83,41 @@ i {
 }
 
 blockquote {
-	border-left: $base__border;
+	color: $color--gray-500;
+	font-family: $font-family--heading;
+	font-weight: $font-weight--semibold;
+	font-size: 2rem;
+	line-height: $line-height--heading;
+	background-color: transparent;
+	display: block;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+	font-style: normal;
+	border: 5px solid $color--pink;
+	border-radius: 5px;
 
 	@include margin($spacing--m auto);
-	@include padding($spacing--m);
+	@include padding($spacing--l);
 
-	p {
+	// p {
 
-		&:last-of-type {
-			margin-bottom: 0;
-		}
+	// 	&:last-of-type {
+	// 		margin-bottom: 0;
+	// 	}
+	// }
+
+	&::before {
+		content: "\201C";
+		position: absolute;
+		top: 0;
+		transform: translateY(-35%);
+		font-family: $font-family--heading;
+		line-height: $line-height--heading;
+		font-size: 11rem;
+		color: $color--red;
+		text-align: center;
+		z-index: -1;
 	}
 }
 
@@ -101,4 +149,56 @@ pre {
 
 code.hljs {
 	background: transparent;
+}
+
+// Used primarily to remove margin spacing on headings or images where it's not needed
+.no-margin {
+	margin: 0;
+}
+
+
+// For any embellishments above the text
+.embellish-above-left {
+	&:before {
+		content: url("/wp-content/themes/urban-strategies-pro/assets/svg/redhr.svg");
+		width: 50px;
+		display: block;
+		margin: 0 0 1.5rem;
+		line-height: 1;
+	}
+}
+
+.embellish-above-right {
+	&:before {
+		content: url("/wp-content/themes/urban-strategies-pro/assets/svg/redhr.svg");
+		width: 50px;
+		display: block;
+		margin: 0 0 1.5rem auto;
+		line-height: 1;
+	}
+}
+
+.embellish-above-center {
+	&:before {
+		content: url("/wp-content/themes/urban-strategies-pro/assets/svg/redhr.svg");
+		width: 50px;
+		display: block;
+		margin: 0 auto 1rem auto;
+		line-height: 1;
+	}
+}
+
+.embellish-below-center {
+	&:after {
+		content: url("/wp-content/themes/urban-strategies-pro/assets/svg/redhr.svg");
+		width: 50px;
+		display: block;
+		margin: 0 auto;
+		line-height: 1;
+	}
+}
+
+// Rounded corners on boxes/rectangles/buttons/etc.
+.rounded {
+	border-radius: 9999px;
 }

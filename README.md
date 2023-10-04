@@ -2,7 +2,7 @@
 
 [![WordPress](https://img.shields.io/badge/wordpress-4.9.8%20tested-brightgreen.svg)]() [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/seothemes/genesis-starter-theme/blob/master/LICENSE.md)
 
-A developer-friendly starter theme used for creating commercial child themes for the Genesis Framework.
+A developer-friendly starter theme used for creating commercial child themes for the Genesis Framework. This base theme was forked and customized by Ashley Harper from Harper Design Co.
 
 It uses [Laravel Mix](https://laravel.com/docs/5.8/mix) as a build tool to automate mundane development tasks like compiling SCSS and minifying images.
 

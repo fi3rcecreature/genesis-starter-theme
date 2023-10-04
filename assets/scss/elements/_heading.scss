@@ -19,3 +19,13 @@
 		font-size: $font-size;
 	}
 }
+
+h4 {
+	@include heading;
+	
+	font-family: $font-family--subheading;
+	color: $color--red;
+	letter-spacing: .8px;
+	font-weight: $font-weight--semibold;
+	text-transform: uppercase;
+}

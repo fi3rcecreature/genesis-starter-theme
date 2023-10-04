@@ -14,16 +14,218 @@
 @import "tools/_index";
 @import "components/block";
 
-.editor-post-title__block .editor-post-title__input,
 body {
 	color: $color--text;
 	font-family: $base--font-family;
+	font-weight: $base--font-weight;
+	font-size: 19px;
+	line-height: $base--line-height;
 }
 
-blockquote {
-	font-style: italic;
+.editor-post-title__block .editor-post-title__input {
+	color: $color--heading;
+	font-family: $font-family--heading;
+	font-weight: $font-weight--heading;
+}
+
+#{$all-headings} {
+
+	@include heading;
+}
+
+h4 {
+	font-family: $font-family--subheading;
+	color: $color--red;
+	letter-spacing: .5px;
+	font-weight: $font-weight--semibold;
+	text-transform: uppercase;
+}
+
+
+a {
+	color: $color--blue;
+	text-decoration: none;
+	font-weight: $font-weight--semibold;
+
+	@include transition();
+
+	@include hover-focus {
+		color: $color--blue;
+		text-decoration: underline;
+	}
+}
+
+.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background), .wp-block-button.is-style-outline > .wp-block-button__link:not(.has-background) {
+	@include button;
+	font-size: 16px;
+	border: 3px solid $color--blue !important;
+	color: $color--blue;
+	background: transparent;
+	padding: $spacing--m $spacing--m * $minor-third;
+
+	@include hover-focus {
+		color: $color--white;
+		border: 3px solid $color--blue;
+		background-color: $color--blue !important;
+	}
 }
 
 .wp-block-button__link {
-	font-size: 1em;
+	@include button;
+	font-size: 16px;
+
+	.is-style-secondary & {
+		color: $color--gray-900;
+		background: $color--yellow;
+
+		@include hover-focus {
+			color: $color--white;
+			background: $color--yellow;
+		}
+	}
+}
+
+.wp-block-button .wp-block-button__link.is-style-outline, .wp-block-button.is-style-outline > .wp-block-button__link {
+	padding: $spacing--m $spacing--m;
+}
+
+.wp-block-image figcaption {
+	color: $color--gray-500;
+	font-weight: $font-weight--medium;
+	font-size: 15px;
+}
+
+blockquote {
+	margin: 0;
+}
+
+.wp-block-pullquote {
+	padding: .5em 0;
+	border: 0;
+}
+
+.wp-block-pullquote blockquote {
+	color: $color--gray-600;
+	font-family: $font-family--heading;
+	font-weight: $font-weight--semibold;
+	font-style: normal;
+	text-align: left;
+	border: 0;
+	border-left: 8px solid $color--yellow;
+	border-radius: 0;
+
+	@include padding($spacing--m);
+
+	p {
+		line-height: $line-height--heading;
+		font-size: $font-size--h6;
+	}
+	&::before {
+		display: none;
+	}
+}
+
+.wp-block-pullquote__citation, .wp-block-pullquote cite, .wp-block-pullquote footer {
+	// font-size: 2rem;
+	color: $color--gray-500;
+	text-transform: none;
+	font-style: italic;
+	font-weight: $font-weight--medium;
+}
+
+.wp-block-quote__citation, .wp-block-quote cite, .wp-block-quote footer {
+	// font-size: 2rem;
+	color: $color--gray-500;
+	font-style: italic;
+	font-weight: $font-weight--medium;
+}
+
+.wp-block-group.has-background {
+	margin-bottom: 2rem;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.wp-block-quote {
+	border: 3px solid $color--pink;
+	@include margin($spacing--m auto);
+	@include padding($spacing--m);
+}
+
+
+// For custom seperator
+.wp-block-separator {
+	border: 0;
+	&:before {
+		content: url("");
+		width: 50px;
+		display: block;
+		margin: 0 0 2rem 0;
+		line-height: 1;
+	}
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+	max-width: 60px;
+}
+
+.wp-block-table {
+	overflow-x: visible;
+}
+
+.wp-block-table th {
+	font-size: $font-size--h6;
+}
+
+.wp-block-table td,
+.wp-block-table th {
+	border: $base--border;
+}
+
+th {
+	background-color: #cfe1e7;
+	font-weight: 600;
+}
+
+.gb-block-accordion .gb-accordion-title {
+	background: $color--gray-100;
+	padding: 10px 15px;
+}
+
+.wp-block-cover {
+	.wp-block-buttons > .wp-block-button {
+		margin-bottom: 0;
+	}
+}
+
+// Gallery captions
+
+.wp-block-gallery .blocks-gallery-item figure {
+    flex-direction: column;
+}
+
+.wp-block-gallery .blocks-gallery-item figcaption {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: 10px 0 20px 0;
+    color: $color--gray-500;
+	font-weight: $font-weight--medium;
+    text-align: center;
+    font-size: 15px;
+    line-height: $base--line-height;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0) 0%, transparent);
+}
+
+// Rounded corners on boxes/rectangles/buttons/etc.
+.rounded {
+	border-radius: 9999px;
+}
+
+.wp-block-themeisle-blocks-tabs :where(.wp-block-columns) {
+	margin-bottom: 0;
 }

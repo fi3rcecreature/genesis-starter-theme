@@ -9,4 +9,86 @@
 ////
 
 @import "gravity-forms/_index";
-@import "atomic-blocks/_index";
+
+/* Polylang - delete if not used */
+
+.menu .lang-item img {
+	vertical-align: middle;
+}
+
+/* Wordpress Carousel  - delete if not used */
+
+#wpcpro-wrapper-386 #sp-wp-carousel-pro-id-386.wpcp-carousel-section.sp-wpcp-386.wpcp-content-carousel .wpcp-single-content {
+	min-height: auto;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#wpcpro-wrapper-386 #sp-wp-carousel-pro-id-386.wpcp-carousel-section.sp-wpcp-386.wpcp-content-carousel a {
+
+	@include button;
+
+	border: 3px solid $color--gray-500 !important;
+				color: $color--gray-500;
+				background: transparent;
+				padding: $spacing--m $spacing--m * $minor-third;
+
+				@include hover-focus {
+					color: $color--white;
+					background: $color--gray-500;
+				}
+}
+
+#wpcpro-wrapper-386 .wpcpro-post-load-more button, #wpcpro-wrapper-386 .wpcpro-post-pagination .page-numbers, #wpcpro-wrapper-386 .wpcpro-load-more button {
+	border-radius: 30px;
+	font-weight: 600;
+	margin-top: 0;
+}
+
+.wpcp-post-title {
+	font-family: 'proxima-nova', sans-serif !important;
+}
+
+.wpcp-post-title::before {
+	display: none !important;
+}
+
+.wpcpro-wrapper .wpcp-carousel-section.detail-with-overlay .wpcp-all-captions {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* Strong Testimonials - delete if not used */
+
+.testimonial-name {
+	font-style: italic;
+}
+
+#genesis-content {
+
+	.strong-view.wpmtst-modern .wpmtst-testimonial-content {
+		margin-bottom: 2rem;
+		font-style: normal;
+	}
+
+	.strong-view.wpmtst-modern .wpmtst-testimonial-content::before, .strong-view.wpmtst-modern .wpmtst-testimonial-content::after {
+		color: $color--yellow;
+		background: $color--yellow;
+	}
+
+	.strong-view .wpmslider-controls a {
+		border-bottom: 0;
+	}
+
+	.strong-view.controls-style-buttons:not(.rtl) .wpmslider-next::before, .strong-view.controls-style-buttons:not(.rtl) .wpmslider-prev::before {
+			background: $color--yellow;
+	}
+}
