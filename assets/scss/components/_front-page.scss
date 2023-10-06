@@ -36,6 +36,60 @@
 		}
 	}
 
+	// Replace with custom code - example with textured bg
+	&-2 {
+		background-color: $color--red;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			mix-blend-mode: soft-light;
+			background-image: url(../../assets/svg/GeoPattern_Top.svg);
+			background-size: cover;
+			background-position: 50%;
+			background-repeat: no-repeat;
+		}
+
+		.wrap {
+			position: relative;
+			background-color: $color--white;
+			padding: $spacing--l;
+			border-radius: 20px;
+			margin-top: -15%;
+			z-index: 9999;
+			
+
+			@include mq(m) {
+				margin-top: -10%;
+				padding: $spacing--xl;
+			}
+		}
+
+		p {
+			margin-bottom: 0;
+		}
+
+		.widget {
+			margin-bottom: 0;
+		}
+
+		h2 {
+
+			&:before {
+				content: url("");
+				width: 50px;
+				display: block;
+				margin: 0 0 2rem 0;
+				line-height: 1;
+			}
+		}
+	}
+
 	&-5 {
 		padding: $spacing--xl 0 $spacing--xl - $gutter;
 		background-color: $color--background;

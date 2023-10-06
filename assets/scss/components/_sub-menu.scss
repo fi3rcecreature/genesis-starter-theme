@@ -17,8 +17,31 @@
 		position: absolute;
 		width: $spacing--xxxl * $major-third;
 		margin-left: -$spacing--m;
-		border: $base--border;
-		background-color: $color--white;
+		background-color: $color--blue;
+		box-shadow: 0px 3px 6px #0e0f0f29;
+		border-radius: 20px;
+
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			bottom: 100%;
+			left: 20px;
+			border: 11px solid transparent;
+			border-bottom-color: rgb(207, 225, 231);
+		}
+		&:after {
+			left: 20px;
+		  	border: 11px solid transparent;
+		  	border-bottom-color: rgb(207, 225, 231);
+		}
+
+		a {
+			color: $color--text;
+
+			@include hover-focus {
+				color: $color--blue;
+			}
+		}
 	}
 
 	// Hovered state.

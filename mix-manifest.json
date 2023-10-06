@@ -1,5 +1,7 @@
 {
-    "/assets/css/main.css": "/assets/css/main.css",
-    "/assets/css/editor.css": "/assets/css/editor.css",
-    "/assets/css/woocommerce.css": "/assets/css/woocommerce.css"
+    "/assets/css/main.css": "/assets/css/main.css?id=94cc899c3dfe5d04400c",
+    "/assets/css/editor.css": "/assets/css/editor.css?id=954156cd2c5b4286ef69",
+    "/assets/css/woocommerce.css": "/assets/css/woocommerce.css?id=a8678b63c8ffccf4c8c6",
+    "/assets/js/min/editor.js": "/assets/js/min/editor.js?id=4b5b177e455066998430",
+    "/assets/js/min/main.js": "/assets/js/min/main.js?id=5320ad66dfcfbf3c9675"
 }

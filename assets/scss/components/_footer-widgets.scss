@@ -9,6 +9,9 @@
 .footer-widgets {
 	padding: $spacing--xl 0;
 
+	:where(.wp-block-columns) {
+		margin-bottom: 0;
+	}
 }
 
 // Footer widget area.

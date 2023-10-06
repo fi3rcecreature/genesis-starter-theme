@@ -40,6 +40,13 @@
 	}
 }
 
+// When you don't want an overlay
+.no-overlay {
+	.hero-section:before {
+		display: none;
+	}
+}
+
 .hero-section {
 
 	@include hero-section;
